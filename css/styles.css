@@ -1,0 +1,482 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  color: #333;
+  background-color: #fff;
+  font-family: "Lora";
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+.hero {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 70vh;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.hero-text {
+  text-align: center;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.hero-text h1 {
+  font-size: 2rem;
+  line-height: 1.4;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.frase.destacada {
+  background-color: #eaf4ea;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.frase.destacada h2 {
+  font-size: 1.8rem;
+  color: #2e6a3e;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.4;
+}
+.ecoanalitica-destacada {
+  background-color: #f7fdf7;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.ecoanalitica-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.ecoanalitica-texto h2 {
+  font-size: 1.6rem;
+  color: #356b3e;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.ecoanalitica-imagen img {
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  max-width: 100%;
+  height: auto;
+}
+
+.servicios-dinamicos {
+  background-color: #f9fdf9;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.tabs-servicios {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  background-color: #e3eee3;
+  border: none;
+  padding: 12px 24px;
+  font-weight: bold;
+  color: #2e6a3e;
+  border-radius: 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab-btn.activo,
+.tab-btn:hover {
+  background-color: #3e7045;
+  color: white;
+}
+
+.contenido-servicio {
+  max-width: 900px;
+  margin: auto;
+}
+
+.servicio-detalle {
+  display: none;
+  animation: fadeIn 0.5s ease-in-out;
+  text-align: left;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.servicio-detalle p {
+  margin-bottom: 1rem;
+}
+
+.servicio-detalle .ver-mas {
+  color: #444;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.servicio-detalle.activo {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.btn-ver-mas {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #3e7045;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-ver-mas:hover {
+  background-color: #2b5a35;
+}
+.ecoanalitica-modelos {
+  padding: 60px 20px;
+  background-color: #f9fdf9;
+  text-align: center;
+}
+
+.ecoanalitica-modelos h2 {
+  color: #2d4c2d;
+  margin-bottom: 40px;
+}
+
+.eco-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.eco-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.eco-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.eco-contenido {
+  padding: 20px;
+}
+
+.eco-contenido h3 {
+  color: #3e7045;
+  margin-bottom: 10px;
+}
+
+.eco-contenido p {
+  color: #444;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.btn-ver-mas {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #3e7045;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-ver-mas:hover {
+  background-color: #2b5a35;
+}
+
+section {
+  padding: 40px 20px;
+}
+.nosotros-carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.nosotros-carousel {
+  display: flex;
+  width: max-content;
+  animation: scrollCarrusel 20s linear infinite;
+}
+
+.nosotros-card {
+  flex: 0 0 13.33%;
+  box-sizing: border-box;
+  padding: 20px;
+  margin: 0 10px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+@keyframes scrollCarrusel {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  } /* Se ajusta según la cantidad de tarjetas */
+}
+
+.nosotros-final-box {
+  background-color: #f4f9f4;
+  border-left: 5px solid #3e7045;
+  padding: 30px 20px;
+  max-width: 10000px;
+  margin: 0 auto 40px auto;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.imagen-full {
+  max-width: 100px;
+  max-width: 1000px;
+  display: block;
+  margin: 20px auto;
+}
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+.nosotros-img-dinamica {
+  position: relative;
+  margin: 40px auto;
+  max-width: 500px;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.img-overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.img-animada {
+  width: 100%;
+  height: auto;
+  transition: transform 6s ease;
+  transform: scale(1.05);
+  animation: floatZoom 12s ease-in-out infinite;
+}
+
+@keyframes floatZoom {
+  0% {
+    transform: scale(1.05) translateY(0);
+  }
+  50% {
+    transform: scale(1.08) translateY(-8px);
+  }
+  100% {
+    transform: scale(1.05) translateY(0);
+  }
+}
+
+.img-texto {
+  position: absolute;
+  bottom: 20px;
+  left: 30px;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  color: #3e7045;
+  font-size: 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.seccion-contacto {
+  background-color: #f4f9f4;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.seccion-contacto h2 {
+  color: #2d4c2d;
+  margin-bottom: 10px;
+}
+
+.contacto-intro {
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.formulario-contacto {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.campo {
+  margin-bottom: 20px;
+}
+
+.campo label {
+  display: block;
+  font-weight: bold;
+  color: #3e7045;
+  margin-bottom: 5px;
+}
+
+.campo input,
+.campo textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+  outline: none;
+  border-color: #3e7045;
+}
+
+.btn-contacto {
+  background-color: #3e7045;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: block;
+  margin: 0 auto;
+}
+
+.btn-contacto:hover {
+  background-color: #2d5a35;
+}
+.equipo-ecoagsus {
+  padding: 60px 20px;
+  background-color: #f4f9f4;
+  text-align: center;
+}
+
+.equipo-ecoagsus h2 {
+  color: #2d4c2d;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.equipo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+
+.equipo-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  max-width: 300px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.equipo-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.equipo-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.equipo-info {
+  padding: 20px;
+}
+
+.equipo-info h3 {
+  margin-top: 0;
+  color: #3e7045;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.equipo-info p {
+  margin: 4px 0;
+  font-size: 0.95rem;
+  color: #444;
+}

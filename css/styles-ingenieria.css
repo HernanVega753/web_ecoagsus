@@ -1,0 +1,85 @@
+.ingenieria-estilo {
+  background-color: #f2faf7;
+  padding: 60px 20px;
+}
+
+.intro-secundaria {
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+}
+
+.intro-secundaria h1 {
+  font-size: 2.2rem;
+  color: #2d4c2d;
+  margin-bottom: 10px;
+}
+
+.intro-secundaria p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.ingenieria-bloques {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 60px;
+}
+
+.ingenieria-card {
+  background-color: #ffffff;
+  padding: 25px;
+  border-left: 6px solid #3e7045;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ingenieria-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.ingenieria-card h2 {
+  color: #3e7045;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.ingenieria-card p {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+/* Animaciones suaves */
+.anim-fade {
+  animation: fadeIn 1.2s ease-in;
+}
+.anim-slide {
+  animation: slideUp 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
