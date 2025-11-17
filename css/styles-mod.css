@@ -35,6 +35,9 @@
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   position: relative;
 }
+.modelo-card img {
+  width: 20dvw;
+}
 
 .modelo-card h2 {
   color: #3e7045;
@@ -122,4 +125,7 @@
     transform: translateY(0);
     opacity: 1;
   }
+}
+.pagina-secundaria {
+  margin-top: 15vh;
 }

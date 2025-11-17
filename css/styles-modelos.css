@@ -1,0 +1,147 @@
+/* =============================
+   ESTILO PÁGINA — MODELOS
+   EcoAgsus · Profesional & Moderno
+============================== */
+
+.pagina-secundaria {
+  padding: 50px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* -----------------------------
+   INTRO
+------------------------------ */
+
+.intro-secundaria {
+  text-align: center;
+  max-width: 850px;
+  margin: 0 auto 60px auto;
+}
+
+.intro-secundaria h1 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #245a36;
+  margin-bottom: 15px;
+}
+
+.intro-secundaria p {
+  font-size: 1.15rem;
+  color: #555;
+  line-height: 1.7;
+}
+
+/* -----------------------------
+   CONTENEDOR
+------------------------------ */
+
+.modelos-bloque {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 35px;
+  margin-bottom: 50px;
+}
+
+/* -----------------------------
+   TARJETAS
+------------------------------ */
+
+.modelo-card {
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  justify-content: space-between;
+}
+
+.modelo-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.modelo-card h2 {
+  color: #2f6c40;
+  margin-top: 0;
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.modelo-card p {
+  color: #444;
+  line-height: 1.6;
+}
+
+.modelo-card ul {
+  padding-left: 18px;
+  color: #444;
+  margin: 0;
+}
+
+.modelo-card li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+/* Imagen mini */
+.modelo-img-mini {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  margin-top: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* -----------------------------
+   BOTÓN VOLVER
+------------------------------ */
+
+.btn-volver {
+  display: inline-block;
+  margin-top: 40px;
+  background: #2e6a3e;
+  color: white;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background 0.25s ease;
+}
+
+.btn-volver:hover {
+  background: #234f2f;
+}
+
+/* -----------------------------
+   MODO OSCURO
+------------------------------ */
+
+body.dark-mode .intro-secundaria h1 {
+  color: #8ce3b4;
+}
+
+body.dark-mode .intro-secundaria p {
+  color: #dadada;
+}
+
+body.dark-mode .modelo-card {
+  background: #262626;
+  color: #e6e6e6;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .modelo-card h2 {
+  color: #91e7c0;
+}
+
+body.dark-mode .btn-volver {
+  background: #4fa574;
+}
+
+body.dark-mode .btn-volver:hover {
+  background: #3a7d57;
+}

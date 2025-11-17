@@ -4,11 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EcoAgsus | Sostenibilidad e Innovación Ambiental</title>
+    <!-- SEO -->
     <meta
       name="description"
       content="EcoAgsus ofrece servicios de agricultura de precisión, consultoría ambiental e ingeniería con tecnologías avanzadas como drones, modelos climáticos y ecoanalítica."
     />
+    <title>
+      Agricultura de precisión y monitoreo multiespectral | EcoAgsus
+    </title>
+    <meta
+      name="description"
+      content="EcoAgsus ofrece soluciones integrales de agricultura de precisión basadas en drones, imágenes multiespectrales y análisis climático. Optimizá tu producción con tecnología, sustentabilidad y datos confiables."
+    />
+
+    <!-- Open Graph (para compartir en redes sociales) -->
+    <meta
+      property="og:title"
+      content="Agricultura de precisión y monitoreo multiespectral | EcoAgsus"
+    />
+    <meta
+      property="og:description"
+      content="Soluciones avanzadas en agricultura de precisión: drones multiespectrales, análisis climático y monitoreo satelital para optimizar tu producción."
+    />
+    <meta property="og:image" content="img/portada0.avif" />
+    <meta property="og:type" content="website" />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/styles-dark.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,24 +42,43 @@
     <header>
       <nav class="navbar">
         <div class="logo">
-          <img src="img/logo.avif" alt="Logo de EcoAgsus" height="50" />
+          <img src="img/logo.png" alt="EcoAgsus" />
         </div>
+
+        <!-- Botón Hamburguesa (solo mobile) -->
+        <button class="hamburger" id="hamburgerBtn">☰</button>
+
+        <!-- Menú de escritorio -->
         <ul class="nav-links">
-          <li><a href="#nosotros">¿Por qué elegirnos?</a></li>
-          <li><a href="#equipo-ecoagsus">Equipo Ecoagsus</a></li>
+          <li><a href="#ecoanalitica">Modelos</a></li>
           <li><a href="#servicios">Servicios</a></li>
-          <li><a href="#ecoanalitica">Ecoanalítica</a></li>
+          <li><a href="#tecnologia">Tecnología & Equipamiento</a></li>
+          <li><a href="#equipo">Nuestro equipo</a></li>
           <li><a href="#contacto">Contacto</a></li>
+          <button id="modo-toggle">☾☼</button>
         </ul>
       </nav>
+
+      <!-- MENÚ DESPLEGABLE MÓVIL -->
+      <div class="mobile-menu" id="mobileMenu">
+        <button>
+          <li><a href="#porque">⬅️</a></li>
+        </button>
+        <a href="#ecoanalitica">Modelos</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#tecnologia">Tecnología & Equipamiento</a>
+        <a href="#equipo">Nuestro equipo</a>
+        <a href="#contacto">Contacto</a>
+        <button id="modo-toggle-mobile">☾☼</button>
+      </div>
     </header>
 
     <section class="hero" id="hero">
       <div class="hero-overlay">
         <div class="hero-text">
           <h1>
-            Utiliza el poder de la Ecoanalítica y de los modelos para impulsar
-            la sostenibilidad
+            Utilizamos el poder de la Ecoanalítica y de los modelos para
+            impulsar la sostenibilidad
           </h1>
         </div>
       </div>
@@ -45,8 +86,12 @@
 
     <section class="frase destacada">
       <h2>
-        Información precisa y oportuna para la <br />
-        <strong>Sostenibilidad de los Ecosistemas</strong>
+        En EcoAgsus integramos ciencia, tecnología y gestión para transformar
+        datos en decisiones sostenibles. Visualizamos el territorio como un
+        sistema donde la productividad, el ambiente y la sociedad se conectan. A
+        través del análisis de información a diferentes escalas, ayudamos a
+        optimizar el uso de los recursos, prevenir pérdidas y fortalecer la
+        sostenibilidad de los ecosistemas.
       </h2>
     </section>
 
@@ -68,6 +113,7 @@
       </div>
     </section>
     <section id="ecoanalitica" class="ecoanalitica-modelos">
+      <h2>Ecoanalítica y Modelos</h2>
       <div class="eco-grid">
         <!-- Tarjeta de Ecoanalítica -->
         <div class="eco-card">
@@ -85,7 +131,9 @@
               ayudan a evaluar clorofila, salinidad, humedad del suelo,
               biodiversidad, caudales de ríos y servicios ecosistémicos.
             </p>
-            <a href="servicios/ecoanalitica.html" class="btn-ver-mas">Ver más</a>
+            <a href="servicios/ecoanalitica.html" class="btn-ver-mas"
+              >Ver más</a
+            >
           </div>
         </div>
 
@@ -171,72 +219,7 @@
           </div>
         </div>
       </div>
-
-      <!-- Texto final con diseño -->
-      <div class="nosotros-final-box">
-        <p>
-          En EcoAgsus creemos que la sostenibilidad es posible, proveyendo de
-          información para que el ser humano y el medio ambiente se
-          complementen. Ofrecemos una experiencia integral, visualizamos el
-          territorio donde se ubica tu proyecto como un todo, como un paisaje
-          que integra productividad, medio ambiente y sociedad. Analizamos datos
-          a nivel de finca, de zona, de región o de país para generar
-          información valiosa y usar eficientemente los recursos naturales,
-          evitar pérdidas y gestionar de manera sostenible los ecosistemas.
-        </p>
-      </div>
-
-      <section class="equipo-ecoagsus" id="equipo-ecoagsus">
-  <h2>Equipo Fundador</h2>
-  <div class="equipo-grid">
-
-    <!-- Tarjeta Anahí -->
-    <a
-      href="https://www.linkedin.com/in/anahi-miner-vega-ecoagsus/"
-      target="_blank"
-      class="equipo-card"
-    >
-      <img src="img/imagenAnahi.avif" alt="Anahí Miner" />
-      <div class="equipo-info">
-        <h3>Anahí Miner</h3>
-        <p><strong>Co-Fundadora</strong></p>
-        <p>Máster en Ing. del Agua y Medioambiental</p>
-        <p>Especialista en Agua, Teledetección y Medio Ambiente</p>
-      </div>
-    </a>
-
-    <!-- Imagen central -->
-    <div class="nosotros-img-dinamica">
-      <div class="img-overlay">
-        <img
-          src="img/imagenSobreNosotros.avif"
-          alt="Equipo de EcoAgsus"
-          class="img-animada"
-        />
-      </div>
-    </div>
-
-    <!-- Tarjeta Lenín -->
-    <a
-      href="https://www.linkedin.com/in/lenin-henriquez-dole-ecoagsus/"
-      target="_blank"
-      class="equipo-card"
-    >
-      <img src="img/imagenLenin.avif" alt="Lenín Henríquez" />
-      <div class="equipo-info">
-        <h3>Lenín Henríquez</h3>
-        <p><strong>Co-Fundador</strong></p>
-        <p>Dr. en Ciencias de la Ingeniería</p>
-        <p>
-          Especialista en Cambio Climático, Recursos Hídricos y Teledetección
-        </p>
-      </div>
-    </a>
-
-  </div>
-</section>
-
-
+    </section>
     <section id="servicios" class="servicios-dinamicos">
       <h2>Servicios</h2>
 
@@ -244,62 +227,213 @@
         <button class="tab-btn activo" data-target="agricultura">
           Agricultura
         </button>
-        <button class="tab-btn" data-target="consultoria">
-          Consultoría Ambiental
-        </button>
+        <button class="tab-btn" data-target="consultoria">Ambiente</button>
         <button class="tab-btn" data-target="ingenieria">Ingeniería</button>
       </div>
 
       <div class="contenido-servicio">
         <div class="servicio-detalle activo" id="agricultura">
           <p>
-            <strong>Agricultura de precisión</strong> con tecnología de drones,
-            monitoreo multiespectral, análisis climáticos y herramientas para
-            una producción eficiente, sostenible y adaptada al cambio climático.
+            <strong>Agricultura Inteligente y Regenerativa</strong>
           </p>
           <p class="ver-mas">
-            EcoAgsus ofrece un enfoque integral para optimizar la producción
-            agrícola combinando tecnología de drones, imágenes multiespectrales
-            y análisis climáticos. Se realizan estudios del ecosistema de la
-            finca, rendimiento de cultivos, servicios ecosistémicos y riesgos
-            por cambio climático. También se brinda soporte para certificaciones
-            ambientales y monitoreo satelital continuo con la plataforma
-            Ecoanalítica.
+            Integramos tecnología, datos y ecología para una producción más
+            eficiente, sostenible y resiliente al cambio climático. Utilizamos
+            drones multiespectrales, análisis climáticos y monitoreo satelital
+            para comprender el funcionamiento del agroecosistema y optimizar el
+            rendimiento del cultivo. Ofrecemos estudios del ecosistema de la
+            finca, evaluación de servicios ecosistémicos, diagnóstico de estrés
+            hídrico, soporte para certificaciones ambientales y seguimiento
+            continuo con EcoAnalítica.
           </p>
           <a href="servicios/agricultura.html" class="btn-ver-mas">Ver más</a>
         </div>
 
         <div class="servicio-detalle" id="consultoria">
           <p>
-            <strong>Estudios de impacto</strong>, modelación territorial y
-            planes de gestión para asegurar el desarrollo sostenible y el
-            cumplimiento ambiental en proyectos públicos y privados.
+            <strong>Gestión Ambiental y Planificación Territorial</strong>
           </p>
           <p class="ver-mas">
-            Brindan servicios técnicos para proyectos que requieren evaluaciones
-            de impacto ambiental, planificación territorial sostenible y
-            estrategias de conservación. Usan herramientas de modelación,
-            análisis de servicios ecosistémicos y diseño de planes de gestión
-            ambiental y social que garanticen cumplimiento normativo y
-            sostenibilidad a largo plazo.
+            Desarrollamos estrategias para garantizar la sostenibilidad de
+            proyectos públicos y privados. Realizamos estudios de impacto
+            ambiental, planes de gestión y modelaciones territoriales que
+            integran conservación, servicios ecosistémicos y cumplimiento
+            normativo. Aplicamos herramientas geoespaciales, indicadores
+            ecológicos y enfoques participativos para asegurar un desarrollo
+            equilibrado entre productividad, biodiversidad y bienestar social.
           </p>
           <a href="servicios/consultoria.html" class="btn-ver-mas">Ver más</a>
         </div>
 
         <div class="servicio-detalle" id="ingenieria">
           <p>
-            <strong>Modelación hidrológica</strong>, topografía de precisión y
-            planificación climática para proyectos que requieren gestión
-            eficiente del agua e infraestructura resiliente.
+            <strong>Ingeniería Hídrica y Climática</strong>
           </p>
           <p class="ver-mas">
-            Desarrollan soluciones técnicas enfocadas en el agua y el
-            territorio, incluyendo modelación hidrológica, análisis de riesgos
-            climáticos, estudios topográficos con drones y planificación de
-            infraestructura resiliente. Su enfoque ayuda a optimizar el uso del
-            agua y adaptarse al cambio climático.
+            Diseñamos soluciones técnicas para una gestión eficiente del agua y
+            el territorio. Aplicamos modelación hidrológica, topografía de
+            precisión con drones y análisis de riesgos climáticos para
+            planificar infraestructura resiliente y sostenible. Nuestro enfoque
+            combina ciencia de datos, ingeniería y planificación adaptativa para
+            fortalecer la seguridad hídrica y energética en escenarios de cambio
+            climático.
           </p>
           <a href="servicios/ingenieria.html" class="btn-ver-mas">Ver más</a>
+        </div>
+      </div>
+    </section>
+    <section id="tecnologia" class="tecnologia-section">
+      <h2>Tecnologías y Equipamiento</h2>
+
+      <p class="tecnologia-intro">
+        Utilizamos herramientas avanzadas que nos permiten obtener datos
+        precisos, comprender el territorio en detalle y transformar la
+        información en decisiones sostenibles.
+      </p>
+      <div class="tecnologia-carousel">
+        <div class="tecnologia-track">
+          <div class="tec-card">
+            <img
+              src="img/servicios/dron.png"
+              alt="Ecoanalítica"
+              class="eco-img"
+            />
+            <h3>Dron Multiespectral con RTK</h3>
+            <p>
+              Capturamos datos precisos con nuestro dron Mavic 3 M Enterprise,
+              equipado con cámara multiespectral y sistema RTK de precisión
+              centimétrica. Detectamos estrés hídrico, plagas o deficiencias
+              antes de que sean visibles, optimizando el manejo del cultivo y
+              del territorio.
+            </p>
+          </div>
+
+          <div class="tec-card">
+            <img
+              src="img/servicios/gps.png"
+              alt="Ecoanalítica"
+              class="eco-img"
+            />
+            <h3>Equipos GPS de Precisión</h3>
+            <p>
+              Utilizamos sistemas GPS/GNSS con tecnología RTK que permiten
+              relevamientos centimétricos, mapeos y zonificaciones sin margen de
+              error. Ideal para delimitar parcelas, planificar riegos y mejorar
+              la eficiencia de cada intervención en campo.
+            </p>
+          </div>
+
+          <div class="tec-card">
+            <img
+              src="img/servicios/modelacion.png"
+              alt="Ecoanalítica"
+              class="eco-img"
+            />
+            <h3>Modelación</h3>
+            <p>
+              Desarrollamos modelos ambientales y productivos que simulan el
+              comportamiento del agua, el suelo y los cultivos bajo distintos
+              escenarios. Convertimos datos en proyecciones confiables para
+              anticipar decisiones y gestionar de manera sostenible.
+            </p>
+          </div>
+
+          <div class="tec-card">
+            <img
+              src="img/servicios/ecoanalitica.png"
+              alt="Ecoanalítica"
+              class="eco-img"
+            />
+            <h3>EcoAnalítica</h3>
+            <p>
+              Analizamos imágenes satelitales y de dron para generar indicadores
+              ecológicos y productivos. A través de índices de vegetación y
+              métricas de paisaje, evaluamos la salud del ecosistema, la
+              biodiversidad y los servicios ambientales.
+            </p>
+          </div>
+
+          <div class="tec-card">
+            <img
+              src="img/servicios/programacion.png"
+              alt="Ecoanalítica"
+              class="eco-img"
+            />
+            <h3>Programación</h3>
+            <p>
+              Creamos algoritmos y dashboards personalizados que integran
+              información espacial, climática y productiva. Automatizamos
+              reportes y alertas para transformar datos complejos en decisiones
+              inteligentes y sostenibles.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Texto final con diseño -->
+    <div class="nosotros-final-box">
+      <p>
+        En EcoAgsus creemos que la sostenibilidad es posible, proveyendo de
+        información para que el ser humano y el medio ambiente se complementen.
+        Ofrecemos una experiencia integral, visualizamos el territorio donde se
+        ubica tu proyecto como un todo, como un paisaje que integra
+        productividad, medio ambiente y sociedad. Analizamos datos a nivel de
+        finca, de zona, de región o de país para generar información valiosa y
+        usar eficientemente los recursos naturales, evitar pérdidas y gestionar
+        de manera sostenible los ecosistemas.
+      </p>
+    </div>
+
+    <section class="equipo-ecoagsus" id="equipo-ecoagsus">
+      <h2>Equipo Fundador</h2>
+      <div class="equipo-grid">
+        <div class="equipo-grid-anahi">
+          <!-- Tarjeta Anahí -->
+          <a
+            href="https://www.linkedin.com/in/anahi-miner-vega-ecoagsus/"
+            target="_blank"
+            class="equipo-card"
+          >
+            <img src="img/imagenAnahi.avif" alt="Anahí Miner" />
+          </a>
+          <div class="equipo-info">
+            <h3>Anahí Miner</h3>
+            <p><strong>- Co-Fundadora</strong></p>
+            <p>- Máster en Ing. del Agua y Medioambiental</p>
+            <p>- Especialista en Agua, Teledetección y Medio Ambiente</p>
+          </div>
+
+          <!-- Imagen central -->
+          <div class="nosotros-img-dinamica">
+            <div class="img-overlay">
+              <img
+                src="img/imagenSobreNosotros.avif"
+                alt="Equipo de EcoAgsus"
+                class="img-animada"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="equipo-grid-anahi">
+          <!-- Tarjeta Lenín -->
+          <a
+            href="https://www.linkedin.com/in/lenin-henriquez-dole-ecoagsus/"
+            target="_blank"
+            class="equipo-card"
+          >
+            <img src="img/imagenLenin.avif" alt="Lenín Henríquez" />
+          </a>
+          <div class="equipo-info">
+            <h3>Lenín Henríquez</h3>
+            <p></p>
+            <p><strong>- Co-Fundador</strong></p>
+            <p>- Dr. en Ciencias de la Ingeniería</p>
+            <p>
+              - Especialista en Cambio Climático, Recursos Hídricos y
+              Teledetección
+            </p>
+          </div>
         </div>
       </div>
     </section>

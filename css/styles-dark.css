@@ -1,0 +1,99 @@
+body.dark-mode {
+  background-color: #121212;
+  color: #ececec;
+}
+
+body.dark-mode .logo {
+  background-color: #ece5e5;
+  border-bottom-left-radius: 15%;
+  border-top-right-radius: 15%;
+  padding-left: 8px;
+}
+
+body.dark-mode .navbar {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .nav-links li a {
+  color: #eaeaea;
+}
+
+body.dark-mode .hero-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+body.dark-mode .frase.destacada,
+body.dark-mode .ecoanalitica-destacada,
+body.dark-mode .servicios-dinamicos,
+body.dark-mode .ecoanalitica-modelos,
+body.dark-mode .seccion-contacto,
+body.dark-mode .equipo-ecoagsus,
+body.dark-mode .nosotros-final-box {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+}
+
+body.dark-mode .servicio-detalle,
+body.dark-mode .eco-card,
+body.dark-mode .agro-card,
+body.dark-mode .consultoria-card,
+body.dark-mode .ingenieria-card,
+body.dark-mode .modelo-card,
+body.dark-mode .modelo-card-destacado,
+body.dark-mode .equipo-card,
+body.dark-mode .nosotros-card {
+  background-color: #222;
+  color: #fbfbfb;
+  border-left-color: #64d88a;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .equipo-info h3,
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode p {
+  color: #c7fde9;
+}
+
+body.dark-mode .tab-btn {
+  background-color: #2a2a2a;
+  color: #a8e6cf;
+}
+
+body.dark-mode .tab-btn.activo,
+body.dark-mode .tab-btn:hover {
+  background-color: #3e7045;
+  color: white;
+}
+
+body.dark-mode .btn-ver-mas,
+body.dark-mode .btn-contacto {
+  background-color: #3e7045;
+}
+
+body.dark-mode .btn-ver-mas:hover,
+body.dark-mode .btn-contacto:hover {
+  background-color: #2b5a35;
+}
+
+body.dark-mode .campo input,
+body.dark-mode .campo textarea {
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+  color: #eee;
+}
+
+body.dark-mode .campo input:focus,
+body.dark-mode .campo textarea:focus {
+  border-color: #64d88a;
+}
+
+body.dark-mode footer {
+  background-color: #1c1c1c;
+  color: #d6d6d6;
+}
+body.darkmode .pagina-secundaria {
+  background-color: #121212;
+}

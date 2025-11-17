@@ -6,6 +6,8 @@
     <title>Consultoría Ambiental | EcoAgsus</title>
     <link rel="stylesheet" href="../css/styles.css" />
     <link rel="stylesheet" href="../css/styles-consultoria.css" />
+    <link rel="stylesheet" href="../css/styles-mod.css" />
+    <link rel="stylesheet" href="../css/styles-dark.css" />
   </head>
   <body>
     <header>
@@ -15,15 +17,32 @@
             ><img src="../img/logo.avif" alt="EcoAgsus" height="50"
           /></a>
         </div>
+        <!-- Botón Hamburguesa (solo mobile) -->
+        <button class="hamburger" id="hamburgerBtn">☰</button>
         <ul class="nav-links">
-          <li><a href="../index.html#nosotros">Nosotros</a></li>
+          <li><a href="../index.html#ecoanalitica">Modelos</a></li>
           <li><a href="../index.html#servicios">Servicios</a></li>
+          <li><a href="../index.html#tecnologia">Contacto</a></li>
+          <li><a href="../index.html#equipo">Nuestro equipo</a></li>
           <li><a href="../index.html#contacto">Contacto</a></li>
+          <li><button id="modo-toggle">☾☼</button></li>
         </ul>
       </nav>
+      <!-- MENÚ DESPLEGABLE MÓVIL -->
+      <div class="mobile-menu" id="mobileMenu">
+        <button>
+          <li><a href="#porque">⬅️</a></li>
+        </button>
+        <a href="../index.html#ecoanalitica">Modelos</a>
+        <a href="../index.html#servicios">Servicios</a>
+        <a href="../index.html#tecnologia">Tecnología & Equipamiento</a>
+        <a href="../index.html#equipo">Nuestro equipo</a>
+        <a href="../index.html#contacto">Contacto</a>
+        <button id="modo-toggle-mobile">☾☼</button>
+      </div>
     </header>
 
-    <main class="pagina-secundaria consultoria-estilo">
+    <main class="pagina-secundaria">
       <section class="intro-secundaria anim-fade">
         <h1>Consultoría Ambiental</h1>
         <p>
@@ -86,10 +105,14 @@
           </p>
         </div>
       </section>
+      <a href="../index.html#servicios" class="btn-volver">
+        ← Volver a Servicios
+      </a>
     </main>
 
     <footer>
       <p>&copy; 2025 EcoAgsus. Todos los derechos reservados.</p>
     </footer>
+    <script src="../servicios.js"></script>
   </body>
 </html>

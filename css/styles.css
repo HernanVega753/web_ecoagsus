@@ -1,21 +1,76 @@
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  overflow-x: hidden;
+  justify-content: center;
+}
 body {
   margin: 0;
+  width: 100dvw;
   font-family: sans-serif;
   color: #333;
   background-color: #fff;
   font-family: "Lora";
 }
+@media (max-width: 768px) {
+  * {
+    box-sizing: border-box;
+  }
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: left;
   background-color: #ffffff;
   padding: 10px 20px;
-  position: sticky;
+  position: fixed;
+  height: 9vh;
+  width: 100dvw;
   top: 0;
   z-index: 1000;
 }
+@media (max-width: 768px) {
+  .navbar {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100dvw;
+    height: 7vh;
+  }
+  .nav-links {
+    display: none;
+  }
+  .nav-links li {
+    display: none;
+  }
+}
+.logo img {
+  padding: 5px;
+  width: 12vw;
+}
+body.dark-mode .logo img {
+  background-color: rgb(202, 234, 202);
+  border-radius: 15px;
+  width: 12vw;
+}
+@media (max-width: 768px) {
+  body.dark-mode .logo img {
+    background-color: rgb(202, 234, 202);
+    border-radius: 15px;
+    width: 20vh;
+  }
+  .logo img {
+    padding: 5px;
+    width: 20vh;
+  }
+}
+
 .nav-links {
+  width: 100dvw;
   list-style: none;
   display: flex;
   gap: 20px;
@@ -24,6 +79,7 @@ body {
   text-decoration: none;
   color: #333;
   font-weight: bold;
+  width: 20%;
 }
 .hero {
   background-size: cover;
@@ -35,12 +91,13 @@ body {
   align-items: center;
   justify-content: center;
   color: white;
+  padding: 0px;
 }
 
 .hero-overlay {
   background-color: rgba(0, 0, 0, 0.4);
-  width: 100%;
-  height: 100%;
+  width: 100dvw;
+  height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -58,425 +115,931 @@ body {
   line-height: 1.4;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
-
-.frase.destacada {
-  background-color: #eaf4ea;
-  text-align: center;
-  padding: 40px 20px;
-}
-
-.frase.destacada h2 {
-  font-size: 1.8rem;
-  color: #2e6a3e;
-  max-width: 800px;
-  margin: 0 auto;
-  line-height: 1.4;
-}
-.ecoanalitica-destacada {
-  background-color: #f7fdf7;
-  padding: 40px 20px;
-  text-align: center;
-}
-
-.ecoanalitica-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.ecoanalitica-texto h2 {
-  font-size: 1.6rem;
-  color: #356b3e;
-  margin-bottom: 20px;
-  line-height: 1.4;
-}
-
-.ecoanalitica-imagen img {
-  border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  max-width: 100%;
-  height: auto;
-}
-
 .servicios-dinamicos {
-  background-color: #f9fdf9;
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.tabs-servicios {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-bottom: 30px;
-  flex-wrap: wrap;
-}
-
-.tab-btn {
-  background-color: #e3eee3;
-  border: none;
-  padding: 12px 24px;
-  font-weight: bold;
-  color: #2e6a3e;
-  border-radius: 24px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.tab-btn.activo,
-.tab-btn:hover {
-  background-color: #3e7045;
-  color: white;
-}
-
-.contenido-servicio {
-  max-width: 900px;
-  margin: auto;
-}
-
-.servicio-detalle {
-  display: none;
-  animation: fadeIn 0.5s ease-in-out;
-  text-align: left;
-  background-color: #ffffff;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-}
-
-.servicio-detalle p {
-  margin-bottom: 1rem;
-}
-
-.servicio-detalle .ver-mas {
-  color: #444;
-  font-size: 0.95rem;
-  line-height: 1.6;
-}
-
-.servicio-detalle.activo {
-  display: block;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
+    width: 80%;
+    justify-self: center;
+    background-color: #f9fdf9;
+    padding: 60px 20px;
+    text-align: center;
+    margin-bottom: 15vh;
   }
-  to {
+
+  .tabs-servicios {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+  }
+
+  .tab-btn {
+    background-color: #e3eee3;
+    border: none;
+    padding: 12px 24px;
+    font-weight: bold;
+    color: #2e6a3e;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .tab-btn.activo,
+  .tab-btn:hover {
+    background-color: #3e7045;
+    color: white;
+  }
+
+  .contenido-servicio {
+    max-width: 900px;
+    margin: auto;
+  }
+
+  .servicio-detalle {
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+    text-align: left;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  }
+
+  .servicio-detalle p {
+    margin-bottom: 1rem;
+
+  }
+
+  .servicio-detalle .ver-mas {
+    color: #b7b6b6;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    
+  text-align: justify;
+  hyphens: auto;
+}
+  }
+
+  .servicio-detalle.activo {
+    display: block;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .btn-ver-mas {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #3e7045;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn-ver-mas:hover {
+    background-color: #2b5a35;
+  }
+.frase.destacada {
+    background-color: #f4f9f4;
+    border-left: 5px solid #3e7045;
+    justify-self: center;
+    margin-bottom: 5vh;
+    margin-top: 10vh;
+    hyphens: auto;
+    text-align: justify;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+    font-size: 0.7rem;
+    color: #333;
+    line-height: 1.6;
+    width: 70%;
+  }
+  .ecoanalitica-destacada {
+    justify-self: center;
+    width: 70%;
+    background-color: #f7fdf7;
+    font-size: 2vh;
+    border-radius: 5%;
+    margin-bottom: 5vh;
+  }
+@media (max-width: 768px) {
+  .ecoanalitica-modelos {
+    padding: 0;
+    margin: 0;
+  }
+  .hero {
+    width: 100vw;
+
+    .hero-overlay {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      hyphens: auto;
+      text-align: justify;
+    }
+  }
+
+  .frase.destacada {
+    background-color: #f4f9f4;
+    border-left: 5px solid #3e7045;
+    margin: 80px;
+    padding: 50px;
+    hyphens: auto;
+    text-align: justify;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+    width: 70%;
+  }
+
+  .frase.destacada h2 {
+    text-align: justify;
+    hyphens: auto;
+    font-size: 1.1rem;
+    color: #2e6a3e;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.4;
+  }
+  .ecoanalitica-destacada {
+    background-color: #f7fdf7;
+
+    border-radius: 5%;
+
+  }
+  .ecoanalitica-texto h2{
+    text-align: center;
+    hyphens: auto;
+  }
+
+  .ecoanalitica-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .ecoanalitica-texto h2 {
+    font-size: 1.6rem;
+    color: #356b3e;
+    margin-bottom: 20px;
+    line-height: 1.4;
+  }
+
+  .ecoanalitica-imagen img {
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    max-width: 100dvw;
+    height: auto;
+  }
+
+  .servicios-dinamicos {
+    width: 80%;
+    justify-self: center;
+    background-color: #f9fdf9;
+    padding: 60px 20px;
+    text-align: center;
+    margin-bottom: 15vh;
+  }
+
+  .tabs-servicios {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+  }
+
+  .tab-btn {
+    background-color: #e3eee3;
+    border: none;
+    padding: 12px 24px;
+    font-weight: bold;
+    color: #2e6a3e;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .tab-btn.activo,
+  .tab-btn:hover {
+    background-color: #3e7045;
+    color: white;
+  }
+
+  .contenido-servicio {
+    max-width: 900px;
+    margin: auto;
+  }
+
+  .servicio-detalle {
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+    text-align: left;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  }
+
+  .servicio-detalle p {
+    margin-bottom: 1rem;
+
+  }
+
+  .servicio-detalle .ver-mas {
+    color: #b7b6b6;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    
+  text-align: justify;
+  hyphens: auto;
+}
+  }
+
+  .servicio-detalle.activo {
+    display: block;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .btn-ver-mas {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #3e7045;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn-ver-mas:hover {
+    background-color: #2b5a35;
+  }
+  .ecoanalitica {
+    background-color: #f9fdf9;
+    display: flex;
+    text-align: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+  }
+  .ecoanalitica-modelos {
+    justify-self: center;
+    width: 80dvw;
+    color: #2d4c2d;
+    margin-bottom: 40px;
+  }
+
+  .ecoanalitica-modelos h2 {
+    color: #2d4c2d;
+    margin-bottom: 40px;
+  }
+  .ecoanalitica-modelos img {
+    width: 30%;
+    background-color: #224a2f;
+    border-bottom-right-radius: 15%;
+  }
+
+  .eco-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-items: center;
+  }
+  @media (max-width: 768px) {
+    .eco-grid img {
+      display: none;
+    }
+    .ecoanalitica-modelos {
+      width: 100%;
+      font-size: 2vh;
+    }
+    .eco-grid {
+      display: flex;
+      flex-direction: column;
+    }
+    .eco-contenido p {
+    width: 70%;
+    justify-self: center;
+  }
+  }
+
+  .eco-card {
+    background-color: #b1f5b5;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .eco-img {
+    width: 100dvw;
+    height: auto;
+    display: block;
+  }
+
+  .eco-contenido {
+    padding: 20px;
+  }
+
+  .eco-contenido h3 {
+    color: #3e7045;
+    margin-bottom: 10px;
+  }
+
+  .eco-contenido p {
+    color: #444;
+    line-height: 1.5;
+    font-size: 0.95rem;
+    hyphens: auto;
+    text-align: justify;
+  }
+
+  .btn-ver-mas {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #3e7045;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn-ver-mas:hover {
+    background-color: #2b5a35;
+  }
+
+  section {
+    padding: 40px 20px;
+    justify-items: center;
+    align-items: center;
+  }
+  .subtitulo-nosotros {
+    width: 80%;
+    text-align: center;
+    font-size: small;
+    hyphens: auto;
+  }
+  .nosotros-carousel-wrapper {
+    overflow: hidden;
+    width: 85%;
+    position: relative;
+    margin-bottom: 30px;
+  }
+
+  .nosotros-carousel {
+    display: flex;
+    width: max-content;
+    animation: scrollCarrusel 20s linear infinite;
+  }
+
+  .nosotros-card {
+    flex: 0 0 13.33%;
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 0 10px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.08);
+  }
+
+  @keyframes scrollCarrusel {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    } /* Se ajusta según la cantidad de tarjetas */
+  }
+
+  .nosotros-final-box {
+    background-color: #f4f9f4;
+    border-left: 5px solid #3e7045;
+    margin: 80px;
+    padding: 50px;
+    hyphens: auto;
+    text-align: justify;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+    width: 70%;
+    justify-self: center;
+  }
+
+  .imagen-full {
+    max-width: 100px;
+    max-width: 1000px;
+    display: block;
+    margin: 20px auto;
+  }
+  footer {
+    width: 100dvw;
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+  }
+  @media (max-width: 768px) {
+    footer {
+      padding: 0;
+    }
+    
+  }
+  .nosotros-img-dinamica {
+    position: relative;
+    margin: 40px auto;
+    max-width: 500px;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+
+  .img-overlay {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .img-animada {
+    display: none;
+    width: 100dvw;
+    height: auto;
+    transition: transform 6s ease;
+    transform: scale(1.05);
+    animation: floatZoom 12s ease-in-out infinite;
+  }
+  @media (max-width: 900px) {
+    .img-animada {
+      display: none;
+    }
+  }
+
+  @keyframes floatZoom {
+    0% {
+      transform: scale(1.05) translateY(0);
+    }
+    50% {
+      transform: scale(1.08) translateY(-8px);
+    }
+    100% {
+      transform: scale(1.05) translateY(0);
+    }
+  }
+
+  .img-texto {
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #3e7045;
+    font-size: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  .seccion-contacto {
+    background-color: #f4f9f4;
+    text-align: center;
+    width: 100dvw;
+    align-self: center;
+    justify-self: center;
+    margin-top: 10vh;
+  }
+
+  .seccion-contacto h2 {
+    color: #2d4c2d;
+    margin-bottom: 10px;
+  }
+
+  .contacto-intro {
+    margin: 0 auto 40px auto;
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .formulario-contacto {
+    width: 35%;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  .campo {
+    margin-bottom: 20px;
+  }
+
+  .campo label {
+    display: block;
+    font-weight: bold;
+    color: #3e7045;
+    margin-bottom: 5px;
+  }
+
+  .campo input,
+  .campo textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+  }
+
+  .campo input:focus,
+  .campo textarea:focus {
+    outline: none;
+    border-color: #3e7045;
+  }
+
+  .btn-contacto {
+    background-color: #3e7045;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .btn-contacto:hover {
+    background-color: #2d5a35;
+  }
+  .equipo-ecoagsus {
+    justify-self: center;
+    width: 80%;
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  .equipo-ecoagsus h3 {
+    color: #316b31;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+  }
+  .equipo-ecoagsus p {
+    color: #9a9e9a;
+    font-size: 1.2rem;
+    text-align: left;
+    margin: 20px;
+  }
+
+  .equipo-grid {
+    display: flex;
+    gap: 40px;
+    justify-content: stretch;
+    align-items: stretch; /* CLAVE: iguala alturas */
+  }
+
+  @media (max-width: 800px) {
+    .nosotros-final-box {
+      justify-self: center;
+      width: 70%;
+      padding: 20px;
+      font-size: 1.5vh;
+    }
+    .equipo-grid {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      text-align: center;
+    }
+    .equipo-info {
+      justify-self: center;
+    }
+    }
+    .equipo-info h3 {
+      margin-top: 0;
+      color: #3e7045;
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+      
+    .equipo-info p {
+      margin-top: 20px;
+      font-size: 1rem;
+      margin-bottom: 8px;
+    }
+  }
+
+  .equipo-info {
+    background-color: transparent;
+    border-style: dashed;
+    border-color: #2b5a35;
+  }
+
+  .equipo-card {
+    border-radius: 12px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .equipo-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  }
+
+  .equipo-info {
+    padding: 20px;
+    flex-grow: 1;
+    max-width: 300px;
+  }
+
+  .equipo-info h3 {
+    margin-top: 0;
+    color: #3e7045;
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+  }
+
+  .equipo-info {
+    background-color: transparent;
+    border-style: dashed;
+    border-color: #2b5a35;
+  }
+  #modo-toggle {
+    margin: 0;
+    padding: 0;
+  }
+  #modo-toggle-mobile {
+    align-self: center;
+    background-color: #89f4ac;
+    min-width: 35px;
+    width: 5%;
+    border-color: black;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+  }
+
+  .mobile-menu button {
+    border: none;
+    aspect-ratio: 1/1;
+    min-width: 50px;
+    width: 5%;
+    background: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  body.dark-mode #modo-toggle-mobile {
+    background-color: #96b496;
+  }
+
+  #hero {
+    position: relative;
+    margin-top: 16vh;
+    hyphens: auto;
+  }
+
+  .fade {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+
+  .show {
     opacity: 1;
   }
-}
-.btn-ver-mas {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 10px 20px;
-  background-color: #3e7045;
-  color: white;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
+  /* =========================================
+   SECCIÓN: TECNOLOGÍAS Y EQUIPAMIENTO
+   ========================================= */
 
-.btn-ver-mas:hover {
-  background-color: #2b5a35;
-}
-.ecoanalitica-modelos {
-  padding: 60px 20px;
-  background-color: #f9fdf9;
-  text-align: center;
-}
-
-.ecoanalitica-modelos h2 {
-  color: #2d4c2d;
-  margin-bottom: 40px;
-}
-
-.eco-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 30px;
-  justify-items: center;
-}
-
-.eco-card {
-  background-color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  overflow: hidden;
-  max-width: 500px;
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-}
-
-.eco-img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.eco-contenido {
-  padding: 20px;
-}
-
-.eco-contenido h3 {
-  color: #3e7045;
-  margin-bottom: 10px;
-}
-
-.eco-contenido p {
-  color: #444;
-  line-height: 1.5;
-  font-size: 0.95rem;
-}
-
-.btn-ver-mas {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 10px 20px;
-  background-color: #3e7045;
-  color: white;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-
-.btn-ver-mas:hover {
-  background-color: #2b5a35;
-}
-
-section {
-  padding: 40px 20px;
-}
-.nosotros-carousel-wrapper {
-  overflow: hidden;
-  width: 100%;
-  position: relative;
-  margin-bottom: 30px;
-}
-
-.nosotros-carousel {
-  display: flex;
-  width: max-content;
-  animation: scrollCarrusel 20s linear infinite;
-}
-
-.nosotros-card {
-  flex: 0 0 13.33%;
-  box-sizing: border-box;
-  padding: 20px;
-  margin: 0 10px;
-  background-color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.08);
-}
-
-@keyframes scrollCarrusel {
-  0% {
-    transform: translateX(0);
+  .tecnologia-section {
+    width: 100dvw;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #f4f9f4;
+    position: relative;
   }
-  100% {
-    transform: translateX(-50%);
-  } /* Se ajusta según la cantidad de tarjetas */
-}
-
-.nosotros-final-box {
-  background-color: #f4f9f4;
-  border-left: 5px solid #3e7045;
-  padding: 30px 20px;
-  max-width: 10000px;
-  margin: 0 auto 40px auto;
-  border-radius: 12px;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
-  font-size: 1.1rem;
-  color: #333;
-  line-height: 1.6;
-}
-
-.imagen-full {
-  max-width: 100px;
-  max-width: 1000px;
-  display: block;
-  margin: 20px auto;
-}
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #f4f4f4;
-}
-.nosotros-img-dinamica {
-  position: relative;
-  margin: 40px auto;
-  max-width: 500px;
-  overflow: hidden;
-  border-radius: 16px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-}
-
-.img-overlay {
-  position: relative;
-  overflow: hidden;
-}
-
-.img-animada {
-  width: 100%;
-  height: auto;
-  transition: transform 6s ease;
-  transform: scale(1.05);
-  animation: floatZoom 12s ease-in-out infinite;
-}
-
-@keyframes floatZoom {
-  0% {
-    transform: scale(1.05) translateY(0);
+  @media (max-width: 768px) {
+    .tecnologia-section {
+      width: 80%;
+      justify-self: center;
+      padding: 25px;
+      margin: 0;
+    }
+    .tecnologia-section h2 {
+      font-size: 1vh;
+      hyphens: auto;
+    }
+    .tecnologia-track {
+      padding: 0;
+      margin: 0;
+    }
   }
-  50% {
-    transform: scale(1.08) translateY(-8px);
+  .tecnologia-section img {
+    width: 15dvw;
+    aspect-ratio: 1/1;
+    margin-bottom: 10dvh;
+    justify-self: center;
   }
-  100% {
-    transform: scale(1.05) translateY(0);
+
+  .tecnologia-section h2 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #224a2f;
+    margin-bottom: 10px;
+    hyphens: auto;
+    text-align: justify;
   }
-}
 
-.img-texto {
-  position: absolute;
-  bottom: 20px;
-  left: 30px;
-  background-color: rgba(255, 255, 255, 0.85);
-  padding: 10px 20px;
-  border-radius: 10px;
-  font-weight: bold;
-  color: #3e7045;
-  font-size: 1rem;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-.seccion-contacto {
-  background-color: #f4f9f4;
-  padding: 60px 20px;
-  text-align: center;
-}
+  .tecnologia-intro {
+    max-width: 750px;
+    margin: 10px auto 50px auto;
+    font-size: 1.05rem;
+    color: #555;
+    line-height: 1.65;
+    hyphens: auto;
+    text-align: justify;
+  }
+  .tecnologia-track {
+    flex-wrap: wrap;
+    width: 100dvw;
+    align-items: center;
+    justify-content: center;
+  }
 
-.seccion-contacto h2 {
-  color: #2d4c2d;
-  margin-bottom: 10px;
-}
+  .tecnologia-carousel {
+    width: 100dvw;
+  }
 
-.contacto-intro {
-  max-width: 700px;
-  margin: 0 auto 40px auto;
-  color: #555;
-  font-size: 1rem;
-  line-height: 1.5;
-}
+  .tecnologia-carousel::-webkit-scrollbar {
+    display: none;
+  }
 
-.formulario-contacto {
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: left;
-}
+  /* === Fila flex para tarjetas === */
+  .tecnologia-track {
+    display: flex;
+    gap: 26px;
+    padding: 0 10px;
+  }
 
-.campo {
-  margin-bottom: 20px;
-}
+  /* === Tarjetas (estilo premium) === */
+  .tec-card {
+    flex: 0 0 320px;
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 28px;
 
-.campo label {
-  display: block;
-  font-weight: bold;
-  color: #3e7045;
-  margin-bottom: 5px;
-}
+    scroll-snap-align: start;
 
-.campo input,
-.campo textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-family: inherit;
-  font-size: 1rem;
-  transition: border-color 0.3s;
-}
+    box-shadow: 0px 8px 22px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(180, 180, 180, 0.22);
 
-.campo input:focus,
-.campo textarea:focus {
-  outline: none;
-  border-color: #3e7045;
-}
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    text-align: left;
+  }
 
-.btn-contacto {
-  background-color: #3e7045;
-  color: white;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  display: block;
-  margin: 0 auto;
-}
+  .tec-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0px 14px 28px rgba(0, 0, 0, 0.12);
+  }
 
-.btn-contacto:hover {
-  background-color: #2d5a35;
-}
-.equipo-ecoagsus {
-  padding: 60px 20px;
-  background-color: #f4f9f4;
-  text-align: center;
-}
+  .tec-card h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #2e6a3e;
+  }
 
-.equipo-ecoagsus h2 {
-  color: #2d4c2d;
-  font-size: 2rem;
-  margin-bottom: 30px;
-}
+  .tec-card p {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.55;
+    hyphens: auto;
+    text-align: justify;
+  }
 
-.equipo-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  justify-content: center;
-}
+  /* =========================================
+            MODO OSCURO
+   ========================================= */
 
-.equipo-card {
-  background-color: #ffffff;
-  border-radius: 12px;
-  overflow: hidden;
-  text-decoration: none;
-  color: inherit;
-  max-width: 300px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+  body.dark-mode .tecnologia-section {
+    background-color: #1f1f1f;
+  }
 
-.equipo-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-}
+  body.dark-mode .tecnologia-section h2 {
+    color: #b2f5d0;
+  }
 
-.equipo-card img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
+  body.dark-mode .tecnologia-intro {
+    color: #ccc;
+  }
 
-.equipo-info {
-  padding: 20px;
-}
+  body.dark-mode .tec-card {
+    background-color: #2a2a2a;
+    border-color: rgba(255, 255, 255, 0.08);
+    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.45);
+  }
 
-.equipo-info h3 {
-  margin-top: 0;
-  color: #3e7045;
-  font-size: 1.2rem;
-  margin-bottom: 8px;
-}
+  body.dark-mode .tec-card h3 {
+    color: #88e0b2;
+  }
 
-.equipo-info p {
-  margin: 4px 0;
-  font-size: 0.95rem;
-  color: #444;
+  body.dark-mode .tec-card p {
+    color: #ddd;
+  }
+  /* ===== NAVBAR RESPONSIVO ===== */
+
+  /* Oculta menú móvil en escritorio */
+  .mobile-menu {
+    display: none;
+  }
+
+  /* Hamburguesa oculta en escritorio */
+  .hamburger {
+    display: none;
+  }
+
+  /* Estilos del menú móvil */
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: right 0.3s ease;
+    z-index: 2000;
+  }
+
+  .mobile-menu.open {
+    right: 0;
+  }
+
+  .mobile-menu a {
+    padding: 15px 25px;
+    text-decoration: none;
+    color: #2e6a3e;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  /* NAV modo oscuro */
+  body.dark-mode .mobile-menu {
+    background-color: rgba(0, 0, 0, 0.95);
+  }
+
+  body.dark-mode .mobile-menu a {
+    color: #9ee6c2;
+  }
+
+  /* ============ MOBILE ============ */
+  @media (max-width: 900px) {
+    .navbar {
+      padding: 0;
+    }
+    .nav-links {
+      display: none; /* Ocultar menú normal */
+    }
+
+    .hamburger {
+      display: block;
+      font-size: 2rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #333;
+      margin-right: 5vw;
+    }
+
+    body.dark-mode .hamburger {
+      color: #fff;
+    }
+  }
 }
