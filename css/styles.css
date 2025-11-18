@@ -7,26 +7,59 @@ html {
   overflow-x: hidden;
   justify-content: center;
 }
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2.25rem;
+}
+h3 {
+  font-size: 1.75rem;
+}
+h4 {
+  font-size: 1.1rem;
+}
+p {
+  font-size: 1.125rem;
+}
+@media (max-width: 768px){
+  h1 {
+  font-size: 2rem;
+  }
+  h2 {
+  font-size: 1.75rem;
+  }
+  h3 {
+  font-size: 1.25rem;
+  }
+  h4 {
+  font-size: 1rem;
+  }
+  p {
+  font-size: 0.75rem;
+  }
+}
 body {
   margin: 0;
   width: 100dvw;
   font-family: sans-serif;
   color: #333;
-  background-color: #fff;
+  background-color: #badebc;
   font-family: "Lora";
 }
 @media (max-width: 768px) {
   * {
     box-sizing: border-box;
   }
+  
 }
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: left;
-  background-color: #ffffff;
-  padding: 10px 20px;
+  background-color: #6db267;
+  padding: 0px 20px;
   position: fixed;
   height: 9vh;
   width: 100dvw;
@@ -49,11 +82,12 @@ body {
   }
 }
 .logo img {
-  padding: 5px;
+  background-color: #6db267;
+  border-radius: 15px;
   width: 12vw;
 }
 body.dark-mode .logo img {
-  background-color: rgb(202, 234, 202);
+  background: none;
   border-radius: 15px;
   width: 12vw;
 }
@@ -64,7 +98,7 @@ body.dark-mode .logo img {
     width: 20vh;
   }
   .logo img {
-    padding: 5px;
+  border-radius: 15px;
     width: 20vh;
   }
 }
@@ -97,7 +131,7 @@ body.dark-mode .logo img {
 .hero-overlay {
   background-color: rgba(0, 0, 0, 0.4);
   width: 100dvw;
-  height: 70vh;
+  height: 65vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -111,14 +145,13 @@ body.dark-mode .logo img {
 }
 
 .hero-text h1 {
-  font-size: 2rem;
   line-height: 1.4;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 .servicios-dinamicos {
     width: 80%;
     justify-self: center;
-    background-color: #f9fdf9;
+    background-color: #6db267;
     padding: 60px 20px;
     text-align: center;
     margin-bottom: 15vh;
@@ -133,7 +166,7 @@ body.dark-mode .logo img {
   }
 
   .tab-btn {
-    background-color: #e3eee3;
+    background-color: #6de86d;
     border: none;
     padding: 12px 24px;
     font-weight: bold;
@@ -152,13 +185,14 @@ body.dark-mode .logo img {
   .contenido-servicio {
     max-width: 900px;
     margin: auto;
+    background-color: #ffffffa7;
   }
 
   .servicio-detalle {
     display: none;
     animation: fadeIn 0.5s ease-in-out;
     text-align: left;
-    background-color: #ffffff;
+    background-color: #ffffffa7;
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
@@ -171,13 +205,12 @@ body.dark-mode .logo img {
 
   .servicio-detalle .ver-mas {
     color: #b7b6b6;
-    font-size: 0.95rem;
     line-height: 1.6;
     
   text-align: justify;
   hyphens: auto;
 }
-  }
+
 
   .servicio-detalle.activo {
     display: block;
@@ -207,16 +240,15 @@ body.dark-mode .logo img {
     background-color: #2b5a35;
   }
 .frase.destacada {
-    background-color: #f4f9f4;
+  background-color: #6db267;
     border-left: 5px solid #3e7045;
     justify-self: center;
-    margin-bottom: 5vh;
-    margin-top: 10vh;
+    margin-bottom: 1vh;
+    margin-top: 1vh;
     hyphens: auto;
     text-align: justify;
     border-radius: 12px;
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
-    font-size: 0.7rem;
     color: #333;
     line-height: 1.6;
     width: 70%;
@@ -224,14 +256,13 @@ body.dark-mode .logo img {
   .ecoanalitica-destacada {
     justify-self: center;
     width: 70%;
-    background-color: #f7fdf7;
-    font-size: 2vh;
+  background-color: #6db267;
     border-radius: 5%;
     margin-bottom: 5vh;
   }
 @media (max-width: 768px) {
   .ecoanalitica-modelos {
-    padding: 0;
+    padding-top: 1vh;
     margin: 0;
   }
   .hero {
@@ -247,31 +278,26 @@ body.dark-mode .logo img {
   }
 
   .frase.destacada {
-    background-color: #f4f9f4;
+  background-color: #6db267;
     border-left: 5px solid #3e7045;
-    margin: 80px;
-    padding: 50px;
     hyphens: auto;
     text-align: justify;
     border-radius: 12px;
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
-    font-size: 1.1rem;
     color: #333;
     line-height: 1.6;
-    width: 70%;
+    width: 100%;
   }
 
-  .frase.destacada h2 {
+  .frase.destacada p {
     text-align: justify;
     hyphens: auto;
-    font-size: 1.1rem;
     color: #2e6a3e;
-    max-width: 800px;
     margin: 0 auto;
     line-height: 1.4;
   }
   .ecoanalitica-destacada {
-    background-color: #f7fdf7;
+  background-color: #6db267;
 
     border-radius: 5%;
 
@@ -290,7 +316,6 @@ body.dark-mode .logo img {
   }
 
   .ecoanalitica-texto h2 {
-    font-size: 1.6rem;
     color: #356b3e;
     margin-bottom: 20px;
     line-height: 1.4;
@@ -306,7 +331,7 @@ body.dark-mode .logo img {
   .servicios-dinamicos {
     width: 80%;
     justify-self: center;
-    background-color: #f9fdf9;
+  background-color: #6db267;
     padding: 60px 20px;
     text-align: center;
     margin-bottom: 15vh;
@@ -321,7 +346,7 @@ body.dark-mode .logo img {
   }
 
   .tab-btn {
-    background-color: #e3eee3;
+  background-color: #6db267;
     border: none;
     padding: 12px 24px;
     font-weight: bold;
@@ -346,7 +371,7 @@ body.dark-mode .logo img {
     display: none;
     animation: fadeIn 0.5s ease-in-out;
     text-align: left;
-    background-color: #ffffff;
+    background-color: #bdedba;
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
@@ -358,8 +383,7 @@ body.dark-mode .logo img {
   }
 
   .servicio-detalle .ver-mas {
-    color: #b7b6b6;
-    font-size: 0.95rem;
+    color: #012b0b;
     line-height: 1.6;
     
   text-align: justify;
@@ -430,7 +454,6 @@ body.dark-mode .logo img {
     }
     .ecoanalitica-modelos {
       width: 100%;
-      font-size: 2vh;
     }
     .eco-grid {
       display: flex;
@@ -471,7 +494,6 @@ body.dark-mode .logo img {
   .eco-contenido p {
     color: #444;
     line-height: 1.5;
-    font-size: 0.95rem;
     hyphens: auto;
     text-align: justify;
   }
@@ -500,7 +522,6 @@ body.dark-mode .logo img {
   .subtitulo-nosotros {
     width: 80%;
     text-align: center;
-    font-size: small;
     hyphens: auto;
   }
   .nosotros-carousel-wrapper {
@@ -521,7 +542,7 @@ body.dark-mode .logo img {
     box-sizing: border-box;
     padding: 20px;
     margin: 0 10px;
-    background-color: #ffffff;
+    background-color: #e4fce5c3;
     border-radius: 12px;
     box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.08);
   }
@@ -544,7 +565,6 @@ body.dark-mode .logo img {
     text-align: justify;
     border-radius: 12px;
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
-    font-size: 1.1rem;
     color: #333;
     line-height: 1.6;
     width: 70%;
@@ -618,7 +638,6 @@ body.dark-mode .logo img {
     border-radius: 10px;
     font-weight: bold;
     color: #3e7045;
-    font-size: 1rem;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   }
   .seccion-contacto {
@@ -638,7 +657,6 @@ body.dark-mode .logo img {
   .contacto-intro {
     margin: 0 auto 40px auto;
     color: #555;
-    font-size: 1rem;
     line-height: 1.5;
   }
 
@@ -666,7 +684,6 @@ body.dark-mode .logo img {
     border: 1px solid #ccc;
     border-radius: 8px;
     font-family: inherit;
-    font-size: 1rem;
     transition: border-color 0.3s;
   }
 
@@ -682,7 +699,6 @@ body.dark-mode .logo img {
     padding: 12px 24px;
     border: none;
     border-radius: 8px;
-    font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
     display: block;
@@ -701,12 +717,10 @@ body.dark-mode .logo img {
 
   .equipo-ecoagsus h3 {
     color: #316b31;
-    font-size: 1.5rem;
     margin-bottom: 30px;
   }
   .equipo-ecoagsus p {
     color: #9a9e9a;
-    font-size: 1.2rem;
     text-align: left;
     margin: 20px;
   }
@@ -723,7 +737,6 @@ body.dark-mode .logo img {
       justify-self: center;
       width: 70%;
       padding: 20px;
-      font-size: 1.5vh;
     }
     .equipo-grid {
       display: flex;
@@ -738,18 +751,16 @@ body.dark-mode .logo img {
     .equipo-info h3 {
       margin-top: 0;
       color: #3e7045;
-      font-size: 1.8rem;
       margin-bottom: 8px;
       
     .equipo-info p {
       margin-top: 20px;
-      font-size: 1rem;
       margin-bottom: 8px;
     }
   }
 
   .equipo-info {
-    background-color: transparent;
+    background-color: #6db267;
     border-style: dashed;
     border-color: #2b5a35;
   }
@@ -777,7 +788,6 @@ body.dark-mode .logo img {
   .equipo-info h3 {
     margin-top: 0;
     color: #3e7045;
-    font-size: 1.8rem;
     margin-bottom: 8px;
   }
 
@@ -816,7 +826,7 @@ body.dark-mode .logo img {
 
   #hero {
     position: relative;
-    margin-top: 16vh;
+    margin-bottom: 15vh;
     hyphens: auto;
   }
 
@@ -838,7 +848,7 @@ body.dark-mode .logo img {
     flex-direction: column;
     text-align: center;
     padding: 80px 20px;
-    background-color: #f4f9f4;
+    background-color: #f4f9f499;
     position: relative;
   }
   @media (max-width: 768px) {
@@ -849,7 +859,6 @@ body.dark-mode .logo img {
       margin: 0;
     }
     .tecnologia-section h2 {
-      font-size: 1vh;
       hyphens: auto;
     }
     .tecnologia-track {
@@ -865,7 +874,6 @@ body.dark-mode .logo img {
   }
 
   .tecnologia-section h2 {
-    font-size: 2.4rem;
     font-weight: 700;
     color: #224a2f;
     margin-bottom: 10px;
@@ -876,7 +884,6 @@ body.dark-mode .logo img {
   .tecnologia-intro {
     max-width: 750px;
     margin: 10px auto 50px auto;
-    font-size: 1.05rem;
     color: #555;
     line-height: 1.65;
     hyphens: auto;
@@ -927,13 +934,11 @@ body.dark-mode .logo img {
 
   .tec-card h3 {
     margin: 0 0 10px 0;
-    font-size: 1.25rem;
     font-weight: 700;
     color: #2e6a3e;
   }
 
   .tec-card p {
-    font-size: 1rem;
     color: #444;
     line-height: 1.55;
     hyphens: auto;
@@ -1006,7 +1011,6 @@ body.dark-mode .logo img {
     padding: 15px 25px;
     text-decoration: none;
     color: #2e6a3e;
-    font-size: 1.2rem;
     font-weight: bold;
   }
 
@@ -1030,7 +1034,6 @@ body.dark-mode .logo img {
 
     .hamburger {
       display: block;
-      font-size: 2rem;
       background: none;
       border: none;
       cursor: pointer;
