@@ -1,17 +1,17 @@
 body.dark-mode {
-  background-color: #121212;
+  background-color: #012809;
   color: #ececec;
 }
 
 body.dark-mode .logo {
-  background-color: #ece5e5;
+  background-color: #012809;
   border-bottom-left-radius: 15%;
   border-top-right-radius: 15%;
   padding-left: 8px;
 }
 
 body.dark-mode .navbar {
-  background-color: #1e1e1e;
+  background-color: #011d06;
 }
 
 body.dark-mode .nav-links li a {

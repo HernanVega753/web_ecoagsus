@@ -87,7 +87,7 @@ body {
   width: 12vw;
 }
 body.dark-mode .logo img {
-  background: none;
+  background-color: rgb(202, 234, 202);
   border-radius: 15px;
   width: 12vw;
 }
@@ -243,8 +243,8 @@ body.dark-mode .logo img {
   background-color: #6db267;
     border-left: 5px solid #3e7045;
     justify-self: center;
-    margin-bottom: 1vh;
-    margin-top: 1vh;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
     hyphens: auto;
     text-align: justify;
     border-radius: 12px;
@@ -643,7 +643,7 @@ body.dark-mode .logo img {
   .seccion-contacto {
     background-color: #f4f9f4;
     text-align: center;
-    width: 100dvw;
+    width: 60dvw;
     align-self: center;
     justify-self: center;
     margin-top: 10vh;
@@ -661,7 +661,7 @@ body.dark-mode .logo img {
   }
 
   .formulario-contacto {
-    width: 35%;
+    width: 40%;
     margin: 0 auto;
     text-align: left;
   }
@@ -710,8 +710,7 @@ body.dark-mode .logo img {
   }
   .equipo-ecoagsus {
     justify-self: center;
-    width: 80%;
-    padding: 60px 20px;
+    width: 90%;
     text-align: center;
   }
 
@@ -733,6 +732,19 @@ body.dark-mode .logo img {
   }
 
   @media (max-width: 800px) {
+    .seccion-contacto {
+    background-color: #f4f9f4;
+    text-align: center;
+    width: 100dvw;
+    align-self: center;
+    justify-self: center;
+    margin-top: 10vh;
+  }
+    .formulario-contacto {
+      width: 80%;
+      margin: 0 auto;
+      text-align: left;
+    }
     .nosotros-final-box {
       justify-self: center;
       width: 70%;
@@ -819,6 +831,9 @@ body.dark-mode .logo img {
     padding: 0;
     margin: 0;
   }
+  body.dark-mode .ver-mas {
+    color: #96b496;
+  }
 
   body.dark-mode #modo-toggle-mobile {
     background-color: #96b496;
@@ -826,7 +841,6 @@ body.dark-mode .logo img {
 
   #hero {
     position: relative;
-    margin-bottom: 15vh;
     hyphens: auto;
   }
 

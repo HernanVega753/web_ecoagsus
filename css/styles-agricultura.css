@@ -5,16 +5,15 @@
 
 /* ---- CONTENEDOR GENERAL ---- */
 .pagina-secundaria {
-  padding: 8rem 5% 5rem;
+  padding: 0;
+  margin: 0;
   max-width: 1200px;
-  margin: auto;
 }
 
 /* ---- INTRO ---- */
 .intro-secundaria {
-  text-align: center;
+  text-align: justify;
   max-width: 850px;
-  margin: auto;
   margin-bottom: 4rem;
 }
 
@@ -29,6 +28,8 @@
 }
 
 .intro-secundaria p {
+  text-align: justify;
+  hyphens: auto;
   font-size: 1.2rem;
   line-height: 1.7;
   color: #444;
@@ -43,6 +44,7 @@
   grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
   gap: 2rem;
   margin-bottom: 4rem;
+  justify-content: center;
 }
 
 /* ---- TARJETAS ---- */
@@ -51,6 +53,8 @@
   background: #ffffff;
   padding: 2.2rem;
   border-radius: 20px;
+  text-align: justify;
+  hyphens: auto;
 
   /* borde simbólico de “parcelas agrícolas” */
   border-left: 6px solid #8bbf58;

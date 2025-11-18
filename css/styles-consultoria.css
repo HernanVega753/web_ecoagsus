@@ -41,6 +41,7 @@
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   gap: 2rem;
   margin-bottom: 4rem;
+  justify-content: center;
 }
 
 /* ---- TARJETAS ---- */
@@ -67,6 +68,8 @@
   color: #2e703b;
   margin-bottom: 1rem;
   font-weight: 700;
+  text-align: justify;
+  hyphens: auto;
 }
 
 .consultoria-card p {
@@ -74,6 +77,8 @@
   line-height: 1.7;
   color: #444;
   margin-bottom: 1rem;
+  text-align: justify;
+  hyphens: auto;
 }
 
 /* ---- BOTÓN VOLVER ---- */
