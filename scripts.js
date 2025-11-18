@@ -12,16 +12,25 @@ const heroImages = [
   "img/portada3.avif",
   "img/portada4.avif",
 ];
-let heroIndex = 0;
+const bg1 = document.querySelector(".bg1");
+const bg2 = document.querySelector(".bg2");
+let index = 0;
+
 function changeBackground() {
-  hero.style.opacity = 0; // Desvanecer antes de cambiar
-  setTimeout(() => {
-    hero.style.backgroundImage = `url('${heroImages[heroIndex]}')`;
-    heroIndex = (heroIndex + 1) % heroImages.length;
-    hero.style.opacity = 1; // Restaurar visibilidad
-  }, 500); // Tiempo para el desvanecimiento
+  const next = heroImages[index];
+
+  if (bg1.style.opacity == "1") {
+    bg2.style.backgroundImage = `url(${next})`;
+    bg2.style.opacity = "1";
+    bg1.style.opacity = "0";
+  } else {
+    bg1.style.backgroundImage = `url(${next})`;
+    bg1.style.opacity = "1";
+    bg2.style.opacity = "0";
+  }
+
+  index = (index + 1) % heroImages.length;
 }
-changeBackground();
 setInterval(changeBackground, 4000);
 
 const track = document.getElementById("carousel-track");
