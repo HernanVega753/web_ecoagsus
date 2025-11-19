@@ -17,10 +17,6 @@ body.dark-mode .nav-links li a {
   color: #eaeaea;
 }
 
-body.dark-mode .hero-overlay {
-  background-color: rgba(0, 0, 0, 0.6);
-}
-
 body.dark-mode .frase.destacada,
 body.dark-mode .ecoanalitica-destacada,
 body.dark-mode .servicios-dinamicos,

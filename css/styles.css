@@ -44,7 +44,7 @@ body {
   width: 100dvw;
   font-family: sans-serif;
   color: #333;
-  background-color: #badebc;
+  background-color: #b3beb3;
   font-family: "Lora";
 }
 @media (max-width: 768px) {
@@ -58,7 +58,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: left;
-  background-color: #6db267;
+  background-color: #9ba999;
   padding: 0px 20px;
   position: fixed;
   height: 9vh;
@@ -125,6 +125,11 @@ body.dark-mode .logo img {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url("../img/portada1.avif"); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .hero-bg {
@@ -164,13 +169,7 @@ body.dark-mode .logo img {
   padding: 25px 40px;
   border-radius: 18px;
 
-  /* efecto vidrio */
-  background: rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
 
-  /* borde tenue */
-  border: 1px solid rgba(255, 255, 255, 0.18);
 
   /* sombra suave */
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
@@ -224,7 +223,8 @@ body.dark-mode .logo img {
 .servicios-dinamicos {
     width: 80%;
     justify-self: center;
-    background-color: #6db267;
+    border-radius: 12px;
+    background-color: #f4f9f499;
     padding: 60px 20px;
     text-align: center;
     margin-bottom: 15vh;
@@ -279,10 +279,9 @@ body.dark-mode .logo img {
   .servicio-detalle .ver-mas {
     color: #b7b6b6;
     line-height: 1.6;
-    
-  text-align: justify;
-  hyphens: auto;
-}
+    text-align: justify;
+    hyphens: auto;
+  }
 
 
   .servicio-detalle.activo {
@@ -313,7 +312,7 @@ body.dark-mode .logo img {
     background-color: #2b5a35;
   }
 .frase.destacada {
-  background-color: #6db267;
+    background-color: #f4f9f499;
     border-left: 5px solid #3e7045;
     justify-self: center;
     margin-top: 10vh;
@@ -351,7 +350,6 @@ body.dark-mode .logo img {
   }
 
   .frase.destacada {
-  background-color: #6db267;
     border-left: 5px solid #3e7045;
     hyphens: auto;
     text-align: justify;
@@ -359,13 +357,13 @@ body.dark-mode .logo img {
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
     color: #333;
     line-height: 1.6;
-    width: 100%;
+    width: 95vw;
+
   }
 
   .frase.destacada p {
     text-align: justify;
     hyphens: auto;
-    color: #2e6a3e;
     margin: 0 auto;
     line-height: 1.4;
   }
@@ -404,7 +402,6 @@ body.dark-mode .logo img {
   .servicios-dinamicos {
     width: 80%;
     justify-self: center;
-  background-color: #6db267;
     padding: 60px 20px;
     text-align: center;
     margin-bottom: 15vh;
@@ -419,7 +416,7 @@ body.dark-mode .logo img {
   }
 
   .tab-btn {
-  background-color: #6db267;
+    background-color: #6db267;
     border: none;
     padding: 12px 24px;
     font-weight: bold;
@@ -444,7 +441,6 @@ body.dark-mode .logo img {
     display: none;
     animation: fadeIn 0.5s ease-in-out;
     text-align: left;
-    background-color: #bdedba;
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
@@ -539,7 +535,7 @@ body.dark-mode .logo img {
   }
 
   .eco-card {
-    background-color: #b1f5b5;
+    background-color: #f4f9f499;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     overflow: hidden;
@@ -615,7 +611,7 @@ body.dark-mode .logo img {
     box-sizing: border-box;
     padding: 20px;
     margin: 0 10px;
-    background-color: #e4fce5c3;
+    background-color: #f4f9f499;
     border-radius: 12px;
     box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.08);
   }
@@ -853,6 +849,7 @@ body.dark-mode .logo img {
       width: 100%;
       font-size: 0.5rem;
       padding: 0;
+      color: #333333;
       margin: 0.3rem;
     }
     .equipo-info h3 {
@@ -890,12 +887,12 @@ body.dark-mode .logo img {
 
   .equipo-info h3 {
     margin-top: 0;
-    color: #89e195;
+    color: ##3a8754;
     margin-bottom: 8px;
   }
 
   .equipo-info {
-    background-color:#052f0e;
+    background-color:#f4f9f499;
     border-style: none;
     border-color: #2b5a35;
     padding: 20px;
@@ -1147,7 +1144,7 @@ body.dark-mode .logo img {
     text-decoration: none;
     color: #2e6a3e;
     font-weight: bold;
-    background-color: #b7fac2;
+    background-color: #adc1b0;
   }
 
   /* NAV modo oscuro */
