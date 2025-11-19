@@ -55,6 +55,31 @@ if (track) {
 
   setInterval(slideLoop, 20);
 }
+// === Textos rotativos del hero ===
+const heroFrases = [
+  "Evaluamos condiciones productivas, climáticas y ambientales",
+  "Proponemos soluciones y medidas para hacer uso eficiente y sostenible de recursos",
+  "Monitoreamos la eficiencia y sostenibilidad de las soluciones implementadas",
+];
+
+const heroTexto = document.getElementById("hero-text-h3");
+let fraseIndex = 0;
+
+// Mostrar frase inicial
+heroTexto.textContent = heroFrases[0];
+
+function cambiarFrase() {
+  heroTexto.style.opacity = 0;
+
+  setTimeout(() => {
+    fraseIndex = (fraseIndex + 1) % heroFrases.length;
+    heroTexto.textContent = heroFrases[fraseIndex];
+    heroTexto.style.opacity = 1;
+  }, 600);
+}
+
+// Cambiar cada 4 segundos (igual que las imágenes)
+setInterval(cambiarFrase, 4000);
 
 // 🎯 Filtro de servicios
 const botonesFiltro = document.querySelectorAll(".filtro-btn");
