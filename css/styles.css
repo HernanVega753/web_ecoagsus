@@ -82,9 +82,10 @@ body {
   }
 }
 .logo img {
-  background-color: #6db267;
+  background-color: rgb(202, 234, 202);
   border-radius: 15px;
   width: 12vw;
+  
 }
 body.dark-mode .logo img {
   background-color: rgb(202, 234, 202);
